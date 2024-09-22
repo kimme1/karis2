@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สนับสนุนเรา</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #28a745;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .donate-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: #218838;
+        }
+
+        .bank-info {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>สนับสนุนเรา</h1>
+        <p>เราขอเชิญชวนคุณช่วยสนับสนุนโครงการของเราผ่านการบริจาค</p>
+
+        <div class="bank-info">
+            <p><strong>ธนาคาร:</strong> กสิกรไทย</p>
+            <p><strong>ชื่อบัญชี:</strong> นายสมชาย ตัวอย่าง</p>
+            <p><strong>หมายเลขบัญชี:</strong> 123-4-56789-0</p>
+        </div>
+
+        <button class="donate-button" onclick="copyAccountNumber()">คัดลอกหมายเลขบัญชี</button>
+
+        <div class="qr-code">
+            <h2>หรือสแกน QR Code เพื่อบริจาค</h2>
+            <img src="path-to-your-qr-code-image.png" alt="QR Code สำหรับบริจาค">
+        </div>
+    </div>
+
+    <script>
+        function copyAccountNumber() {
+            var accountNumber = "123-4-56789-0"; // หมายเลขบัญชีของคุณ
+            navigator.clipboard.writeText(accountNumber).then(function() {
+                alert("คัดลอกหมายเลขบัญชีเรียบร้อยแล้ว!");
+            }, function() {
+                alert("ไม่สามารถคัดลอกหมายเลขบัญชีได้");
+            });
+        }
+    </script>
+
+</body>
+</html>
